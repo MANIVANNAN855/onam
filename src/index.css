@@ -298,7 +298,7 @@ h6 {
 }
 
 .hero-glass-box {
-  background: rgba(30, 41, 59, 0.75);
+  background: transparent;
   backdrop-filter: blur(12px);
   padding: 3rem;
   border-radius: 1.5rem;
