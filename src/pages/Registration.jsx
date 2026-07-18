@@ -175,7 +175,7 @@ const Registration = () => {
     switch (eventName) {
       case 'Pookolam': return '/pookolam.jpg';
       case 'Duo Dance': return duoDanceImg;
-      case 'Fashion Parade': return '/kathakali_dancer_bg.png';
+      case 'Fashion Parade': return fashionParadeImg;
       case 'Tug Of War': return tugOfWarImg;
       default: return '/king_mahabali_bg.png';
     }
