@@ -39,7 +39,7 @@ const EVENTS_DATA = [
     date: 'Sept 8, 2026',
     descKey: 'feature_tug_desc',
     color: '#EF4444',
-    image: tugOfWarImg
+    image: '/tug of war.jpg'
   }
 ];
 
