@@ -300,14 +300,14 @@ h6 {
 }
 
 .feature {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 240, 0.95));
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(10px);
-  color: #1e293b;
+  color: #f8fafc;
   padding: 2.5rem;
   border-radius: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid rgba(245, 158, 11, 0.3);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .feature:hover {
@@ -325,7 +325,7 @@ h6 {
 }
 
 .feature p {
-  color: #475569;
+  color: #cbd5e1;
   font-size: 1.05rem;
   font-weight: 500;
 }
