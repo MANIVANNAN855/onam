@@ -189,7 +189,7 @@ const Registration = () => {
       left: 0,
       width: '100vw',
       height: '100vh',
-      backgroundImage: `url(${getBackgroundImage(event)})`,
+      backgroundImage: `url('${getBackgroundImage(event)}')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
