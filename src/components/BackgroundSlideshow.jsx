@@ -26,7 +26,8 @@ const BackgroundSlideshow = () => {
           className={`bg-slide ${index === currentIndex ? 'active' : ''}`}
           style={{ 
             backgroundImage: `url(${slide.img})`,
-            backgroundPosition: slide.position || 'center center',
+            '--bg-pos-desktop': slide.position || 'center center',
+            '--bg-pos-mobile': 'center center',
             filter: slide.filter 
           }}
         />
