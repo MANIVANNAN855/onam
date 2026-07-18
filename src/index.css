@@ -282,15 +282,19 @@ h6 {
 
 /* Home Page Hero Redesign */
 .hero-redesign {
-  text-align: left;
+  text-align: center;
   padding: 8rem 5% 4rem 5%;
   min-height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-content-left {
-  max-width: 700px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-glass-box {
@@ -301,6 +305,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .hero-badge {
@@ -338,7 +343,8 @@ h6 {
 .hero-actions {
   display: flex;
   gap: 1.5rem;
-  padding-left: 1rem;
+  padding-left: 0;
+  justify-content: center;
 }
 
 .btn-primary-red {
