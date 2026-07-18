@@ -17,8 +17,8 @@ function App() {
       <FontProvider>
         <Router>
           <div className="app-container">
-            <Navbar />
             <MarqueeBanner />
+            <Navbar />
             <WelcomePopup />
             <main className="main-content">
               <Routes>
