@@ -11,24 +11,25 @@ const Home = () => {
     <>
       <BackgroundSlideshow />
       <div className="home-container">
-        <header className="hero">
-          <div className="hero-content">
-            <div className="title-badge">
+        <header className="hero hero-redesign">
+          <div className="hero-content-left">
+            <div className="hero-glass-box">
+              <div className="hero-badge">
+                <span>📅 24 August 2026</span>
+                <span className="badge-dot">•</span>
+                <span>📍 KEC, PERUNDURAI</span>
+              </div>
               <h1 
-                className="title-animate" 
-                style={{ 
-                  fontFamily: currentFont, 
-                  marginBottom: 0,
-                  transition: 'opacity 0.5s ease-in-out'
-                }}
+                className="hero-title"
+                style={{ fontFamily: currentFont }}
               >
                 {t('welcome_title')}
               </h1>
+              <p className="hero-subtitle">{t('welcome_subtitle')}</p>
             </div>
-            <p className="subtitle">{t('welcome_subtitle')}</p>
             <div className="hero-actions">
-              <Link to="/events" className="btn-primary">{t('explore_events')}</Link>
-              <Link to="/events" className="btn-secondary">{t('register_now')}</Link>
+              <Link to="/register" className="btn-primary-red">Register Now &rarr;</Link>
+              <Link to="/events" className="btn-outline">View Events</Link>
             </div>
           </div>
         </header>

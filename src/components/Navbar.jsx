@@ -20,32 +20,19 @@ const Navbar = () => {
           OnamFest '26
         </Link>
       </div>
-      <ul className="navbar-links">
-        <li><NavLink to="/" end>{t('nav_home')}</NavLink></li>
-        <li><NavLink to="/events">{t('nav_events')}</NavLink></li>
-        <li>
-          <button 
-            onClick={toggleLanguage}
-            style={{
-              background: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              color: 'var(--text-light)',
-              padding: '0.4rem 0.8rem',
-              borderRadius: '20px',
-              cursor: 'pointer',
-              fontWeight: '600',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              transition: 'all 0.2s ease',
-              marginLeft: '1rem'
-            }}
-          >
-            <span style={{ fontSize: '1.2rem' }}>🌐</span> 
-            {language === 'en' ? 'മ' : 'En'}
-          </button>
-        </li>
-      </ul>
+      <div className="navbar-pill">
+        <NavLink to="/" end className={({isActive}) => isActive ? 'active-pill' : ''}>{t('nav_home')}</NavLink>
+        <NavLink to="/events" className={({isActive}) => isActive ? 'active-pill' : ''}>{t('nav_events')}</NavLink>
+      </div>
+      <div className="navbar-right-pill">
+        <span className="navbar-reg-status">
+          <strong>24 AUG</strong> <small>REG CLOSES</small>
+        </span>
+        <button onClick={toggleLanguage} className="lang-btn">
+          <span style={{ fontSize: '1.1rem' }}>🌐</span> 
+          {language === 'en' ? 'മ' : 'En'}
+        </button>
+      </div>
     </nav>
   );
 };
