@@ -14,11 +14,7 @@ const Home = () => {
         <header className="hero hero-redesign">
           <div className="hero-content-left">
             <div className="hero-glass-box">
-              <div className="hero-badge">
-                <span>📅 24 August 2026</span>
-                <span className="badge-dot">•</span>
-                <span>📍 KEC, PERUNDURAI</span>
-              </div>
+
               <h1 
                 className="hero-title"
                 style={{ fontFamily: currentFont }}
