@@ -282,19 +282,19 @@ h6 {
 
 /* Home Page Hero Redesign */
 .hero-redesign {
-  text-align: left;
+  text-align: center;
   padding: 8rem 5% 4rem 5%;
   min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .hero-content-left {
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .hero-glass-box {
@@ -305,7 +305,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-badge {
@@ -330,29 +330,30 @@ h6 {
 .hero-title {
   font-size: 4.5rem;
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--primary-color);
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   color: #cbd5e1;
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-actions {
   display: flex;
   gap: 1.5rem;
   padding-left: 0;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .btn-primary-red {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: #ef4444; /* bright red */
+  background-color: #ef4444;
+  /* bright red */
   color: white;
   text-decoration: none;
   border-radius: 9999px;
