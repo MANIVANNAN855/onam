@@ -176,7 +176,7 @@ const Registration = () => {
       case 'Pookolam': return '/pookolam.jpg';
       case 'Duo Dance': return duoDanceImg;
       case 'Fashion Parade': return fashionParadeImg;
-      case 'Tug Of War': return '/tug of war.jpg';
+      case 'Tug Of War': return '/tug_of_war_generated.png';
       default: return '/king_mahabali_bg.png';
     }
   };
