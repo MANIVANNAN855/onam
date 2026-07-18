@@ -62,7 +62,8 @@ body {
 }
 
 .bg-slide.active {
-  opacity: 0.7; /* Dim slightly for text readability */
+  opacity: 0.7;
+  /* Dim slightly for text readability */
   z-index: 1;
 }
 
@@ -77,14 +78,16 @@ h6 {
 }
 
 .marquee-container {
-  background-color: #dc2626; /* Deep Red */
+  background-color: #dc2626;
+  /* Deep Red */
   color: white;
   padding: 10px 0;
   overflow: hidden;
   white-space: nowrap;
   display: flex;
   position: relative;
-  z-index: 100; /* Ensure it stays above Navbar */
+  z-index: 100;
+  /* Ensure it stays above Navbar */
 }
 
 .marquee-content {
@@ -120,7 +123,7 @@ h6 {
   margin-left: 1rem;
   text-transform: uppercase;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .marquee-btn:hover {
@@ -129,8 +132,13 @@ h6 {
 }
 
 @keyframes marquee-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.33%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.33%);
+  }
 }
 
 /* App Container */
@@ -300,14 +308,14 @@ h6 {
 }
 
 .feature {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(10px);
-  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  color: #1e293b;
   padding: 2.5rem;
   border-radius: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .feature:hover {
@@ -319,13 +327,14 @@ h6 {
 .feature h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: #d97706; /* Darker vibrant orange for good contrast */
+  color: #d97706;
+  /* Darker vibrant orange for good contrast */
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .feature p {
-  color: #cbd5e1;
+  color: #334155;
   font-size: 1.05rem;
   font-weight: 500;
 }
@@ -390,7 +399,8 @@ h6 {
 .event-card-content h3 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
-  color: #d97706; /* Vibrant orange */
+  color: #d97706;
+  /* Vibrant orange */
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -413,7 +423,10 @@ h6 {
 /* Welcome Popup & Countdown */
 .popup-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   display: flex;
@@ -551,7 +564,8 @@ h6 {
 }
 
 .popup-done-btn {
-  background: #f59e0b; /* Amber/Gold color to match the theme */
+  background: #f59e0b;
+  /* Amber/Gold color to match the theme */
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -572,13 +586,25 @@ h6 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Registration Page */
