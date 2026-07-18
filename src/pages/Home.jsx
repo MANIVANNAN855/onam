@@ -24,7 +24,7 @@ const Home = () => {
               <p className="hero-subtitle">{t('welcome_subtitle')}</p>
             </div>
             <div className="hero-actions">
-              <Link to="/register" className="btn-primary-red">Register Now &rarr;</Link>
+              <Link to="/events" className="btn-primary-red">Register Now &rarr;</Link>
               <Link to="/events" className="btn-outline">View Events</Link>
             </div>
           </div>
