@@ -5,7 +5,8 @@ const slides = [
   { img: '/bb.jpg', filter: 'none', position: 'center center' }, // Boat race
   { img: '/cc.avif', filter: 'none', position: 'center 25%' },   // Yellow beard
   { img: '/dd.jpg', filter: 'none', position: 'center top' }, // Mahabali
-  { img: '/ee.png', filter: 'none', position: 'center 15%' }    // Pookolam women
+  { img: '/ee.png', filter: 'none', position: 'center 15%', mobilePosition: 'center center' },    // Pookolam women
+  { img: '/ff.jpg', filter: 'none', position: 'center center', mobilePosition: 'center center' } // New image
 ];
 
 const BackgroundSlideshow = () => {
