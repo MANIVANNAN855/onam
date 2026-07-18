@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const slides = [
-  { img: '/aa.webp', filter: 'none', position: 'center 10%' }, // Kathakali boat
+  { img: '/aa.jpg', filter: 'none', position: 'center 10%' }, // Kathakali boat
   { img: '/bb.jpg', filter: 'none', position: 'center center' }, // Boat race
   { img: '/cc.avif', filter: 'none', position: 'center 25%' },   // Yellow beard
   { img: '/dd.jpg', filter: 'none', position: 'center top' }, // Mahabali
