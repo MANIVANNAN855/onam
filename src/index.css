@@ -591,7 +591,8 @@ h6 {
 
 .registration-card,
 .success-message {
-  background: var(--bg-card);
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(8px);
   padding: 3rem;
   border-radius: 1.5rem;
   width: 100%;
