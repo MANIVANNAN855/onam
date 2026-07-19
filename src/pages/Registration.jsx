@@ -83,7 +83,24 @@ const Registration = () => {
   }, [leaderData.rollNo, leaderData.department]);
 
   const handleLeaderChange = (e) => {
-    setLeaderData({ ...leaderData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    
+    setLeaderData(prev => {
+      const updatedData = { ...prev, [name]: value };
+      
+      // Automatically generate email from Full Name if the user is typing the name
+      if (name === 'name') {
+        // Extract a clean string (alphanumeric only, lowercase)
+        const cleanName = value.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (cleanName) {
+          updatedData.email = `${cleanName}@kongu.edu`;
+        } else {
+          updatedData.email = '';
+        }
+      }
+      
+      return updatedData;
+    });
   };
 
   const handleMemberChange = (index, field, value) => {
