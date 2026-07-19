@@ -187,6 +187,19 @@ const Registration = () => {
     }
   };
 
+  const getBackgroundPosition = (eventName) => {
+    switch (eventName) {
+      case 'Duo Dance':
+      case 'Fashion Parade': 
+      case 'Pookolam':
+        return 'top';
+      case 'Tug Of War': 
+        return 'center';
+      default: 
+        return 'center';
+    }
+  };
+
   return (
     <>
     <div style={{
@@ -197,7 +210,7 @@ const Registration = () => {
       height: '100vh',
       backgroundImage: `url('${getBackgroundImage(event)}')`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: getBackgroundPosition(event),
       backgroundRepeat: 'no-repeat',
       backgroundColor: 'var(--bg-dark)',
       zIndex: -1,
