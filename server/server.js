@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_URI)
 // API Routes
 app.post('/api/register', upload.single('audioFile'), async (req, res) => {
   try {
-    let { event, leaderData, teamMembers } = req.body;
+    let { event, leaderData, teamMembers, teamId } = req.body;
     
     // Parse stringified JSON fields from FormData
     if (typeof leaderData === 'string') {
@@ -70,6 +70,7 @@ app.post('/api/register', upload.single('audioFile'), async (req, res) => {
       event,
       leaderData,
       teamMembers,
+      teamId,
       audioFile: req.file ? req.file.path : null
     });
 

@@ -40,7 +40,20 @@ const Registration = () => {
   const eventParam = queryParams.get('event') || '';
 
   const [event, setEvent] = useState(eventParam);
+  const [randomNumber] = useState(() => Math.floor(10000 + Math.random() * 90000));
+
+  const getEventPrefix = (eventName) => {
+    switch(eventName) {
+      case 'Pookolam': return 'PK';
+      case 'Tug Of War': return 'TOW';
+      case 'Fashion Parade': return 'FP';
+      case 'Duo Dance': return 'DD';
+      default: return 'TEAM';
+    }
+  };
   
+  const teamId = `${getEventPrefix(event)}-${randomNumber}`;
+
   const [leaderData, setLeaderData] = useState({
     name: '',
     rollNo: '',
@@ -51,6 +64,7 @@ const Registration = () => {
 
   const [teamMembers, setTeamMembers] = useState([]);
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [isEmailFocused, setIsEmailFocused] = useState(false);
   const [rulesAccepted, setRulesAccepted] = useState(false);
@@ -111,11 +125,13 @@ const Registration = () => {
       return;
     }
     setEmailError('');
+    setIsLoading(true);
     
     try {
       const formData = new FormData();
       formData.append('event', event);
-      formData.append('leaderData', JSON.stringify(leaderData));
+      formData.append('teamId', teamId);
+      formData.append('leaderData', JSON.stringify({ ...leaderData, teamId }));
       formData.append('teamMembers', JSON.stringify(teamMembers));
       
       // Audio file support has been removed
@@ -130,6 +146,7 @@ const Registration = () => {
         if (response.status === 409) {
           const errData = await response.json();
           alert(errData.error || 'Already exsist so unable to register');
+          setIsLoading(false);
           return;
         }
         throw new Error('Failed to submit registration');
@@ -141,6 +158,8 @@ const Registration = () => {
     } catch (error) {
       console.error('Submission error:', error);
       alert(t('error_submit'));
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -160,6 +179,11 @@ const Registration = () => {
           <h2>{t('registration_successful')}</h2>
           <p>{t('thank_you')} {leaderData.name}. {t('look_forward')}</p>
           
+          <div style={{ marginTop: '2rem', marginBottom: '2rem', padding: '1.5rem', backgroundColor: 'rgba(245, 158, 11, 0.15)', borderRadius: '12px', border: '2px dashed var(--primary-color)', textAlign: 'center' }}>
+            <p style={{ margin: 0, fontSize: '1.2rem', color: '#fff', fontWeight: '500' }}>Your Team ID</p>
+            <h1 style={{ margin: '0.5rem 0 0 0', color: 'var(--primary-color)', fontSize: '2.5rem', letterSpacing: '3px', fontWeight: 'bold' }}>{teamId}</h1>
+            <p style={{ margin: '0.5rem 0 0 0', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Please save this ID for future reference</p>
+          </div>
           {whatsappLink && (
             <div style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: 'rgba(37, 211, 102, 0.1)', borderRadius: '12px', border: '1px solid rgba(37, 211, 102, 0.3)' }}>
               <h3 style={{ marginBottom: '1rem', color: '#25D366' }}>Join the Event WhatsApp Group</h3>
@@ -277,6 +301,7 @@ const Registration = () => {
         <form onSubmit={handleSubmit} className="registration-form">
 
           <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>{t('team_leader_details')}</h3>
+
           
           <div className="form-row">
             <div className="form-group">
@@ -393,14 +418,29 @@ const Registration = () => {
           <button 
             type="submit" 
             className="btn-primary submit-btn" 
-            disabled={!rulesAccepted}
+            disabled={!rulesAccepted || isLoading}
             style={{ 
               marginTop: '2rem', 
-              opacity: rulesAccepted ? 1 : 0.5, 
-              cursor: rulesAccepted ? 'pointer' : 'not-allowed' 
+              opacity: (rulesAccepted && !isLoading) ? 1 : 0.6, 
+              cursor: (rulesAccepted && !isLoading) ? 'pointer' : 'not-allowed',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '10px'
             }}
           >
-            {t('submit_registration')}
+            {isLoading ? (
+              <>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2V6M12 18V22M6 12H2M22 12H18M19.0711 19.0711L16.2426 16.2426M19.0711 4.92893L16.2426 7.75736M4.92893 4.92893L7.75736 7.75736M4.92893 19.0711L7.75736 16.2426" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite" />
+                  </path>
+                </svg>
+                Submitting...
+              </>
+            ) : (
+              t('submit_registration')
+            )}
           </button>
         </form>
       </div>

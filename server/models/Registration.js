@@ -18,10 +18,12 @@ const RegistrationSchema = new mongoose.Schema({
     rollNo: { type: String, required: true },
     email: { type: String, required: true },
     department: { type: String, required: true },
-    year: { type: String, required: true }
+    year: { type: String, required: true },
+    teamId: { type: String }
   },
   teamMembers: [MemberSchema],
   audioFile: { type: String }, // Store path or filename of uploaded audio
+  teamId: { type: String }, // Storing teamId at root level
   createdAt: { type: Date, default: Date.now }
 });
 
