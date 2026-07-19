@@ -20,6 +20,14 @@ export const translations = {
     feature_fashion_desc: "Walk the ramp and showcase your traditional or modern style.",
     feature_fun_title: "Fun Activities",
     feature_fun_desc: "Engage in exciting traditional games and fun-filled activities.",
+    feature_boatrace_title: "Vallam Kali",
+    feature_boatrace_desc: "Experience the thrilling traditional boat race.",
+    feature_sadya_title: "Onasadya",
+    feature_sadya_desc: "Enjoy the grand traditional feast served on plantain leaves.",
+    feature_pulikali_title: "Pulikali",
+    feature_pulikali_desc: "Watch the spectacular tiger dance with vibrant body painting.",
+    feature_thiruvathira_title: "Thiruvathira",
+    feature_thiruvathira_desc: "Graceful traditional dance performed by women.",
 
     // Events Page
     fest_events_title: "Fest Events",
@@ -104,6 +112,14 @@ export const translations = {
     feature_fashion_desc: "നിങ്ങളുടെ പരമ്പരാഗത അല്ലെങ്കിൽ ആധുനിക ശൈലി റാംപിൽ പ്രദർശിപ്പിക്കുക.",
     feature_fun_title: "രസകരമായ പരിപാടികൾ",
     feature_fun_desc: "ആവേശകരമായ പരമ്പരാഗത ഗെയിമുകളിലും രസകരമായ പ്രവർത്തനങ്ങളിലും പങ്കെടുക്കുക.",
+    feature_boatrace_title: "വള്ളംകളി",
+    feature_boatrace_desc: "ആവേശകരമായ പരമ്പരാഗത വള്ളംകളി അനുഭവിക്കുക.",
+    feature_sadya_title: "ഓണസദ്യ",
+    feature_sadya_desc: "വാഴയിലയിൽ വിളമ്പുന്ന ഗംഭീരമായ പരമ്പരാഗത സദ്യ ആസ്വദിക്കുക.",
+    feature_pulikali_title: "പുലികളി",
+    feature_pulikali_desc: "വർണ്ണാഭമായ ശരീരചിത്രങ്ങളുള്ള ഗംഭീരമായ പുലികളി കാണുക.",
+    feature_thiruvathira_title: "തിരുവാതിര",
+    feature_thiruvathira_desc: "സ്ത്രീകൾ അവതരിപ്പിക്കുന്ന മനോഹരമായ പരമ്പരാഗത നൃത്തം.",
 
     // Events Page
     fest_events_title: "ഫെസ്റ്റ് ഇവന്റുകൾ",

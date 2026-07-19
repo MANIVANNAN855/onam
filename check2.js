@@ -1,0 +1,1 @@
+fetch('https://onam-kec.vercel.app').then(r=>r.text()).then(html=>{ const m = html.match(/src=\"(\/assets\/index-[^\"]+\.js)\"/); if(m) { fetch('https://onam-kec.vercel.app'+m[1]).then(r=>r.text()).then(js=>console.log('Includes Render:', js.includes('onam-backend.onrender.com'), '| Includes localhost:', js.includes('localhost:5000'))); } })

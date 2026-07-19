@@ -12,7 +12,7 @@ const EventCard = ({ event }) => {
           ...(event.image && { 
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${event.image}')`, 
             backgroundSize: 'cover', 
-            backgroundPosition: 'center' 
+            backgroundPosition: event.bgPosition || 'center' 
           })
         }}
       >

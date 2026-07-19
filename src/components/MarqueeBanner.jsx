@@ -10,18 +10,18 @@ const MarqueeBanner = () => {
       <div className="marquee-content">
         {/* We repeat the content multiple times to ensure a smooth infinite scroll loop */}
         <span>
-          <span className="marquee-icon">🎉</span> {t('marquee_text')} 
-          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')} 
+          <span className="marquee-icon">🎉</span> {t('marquee_text')}
+          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')}
           <Link to="/register" className="marquee-btn">{t('marquee_btn')}</Link>
         </span>
         <span>
-          <span className="marquee-icon">🎉</span> {t('marquee_text')} 
-          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')} 
+          <span className="marquee-icon">🎉</span> {t('marquee_text')}
+          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')}
           <Link to="/register" className="marquee-btn">{t('marquee_btn')}</Link>
         </span>
         <span>
-          <span className="marquee-icon">🎉</span> {t('marquee_text')} 
-          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')} 
+          <span className="marquee-icon">🎉</span> {t('marquee_text')}
+          <span className="marquee-icon" style={{ marginLeft: '1rem' }}>⏰</span> {t('marquee_date')}
           <Link to="/register" className="marquee-btn">{t('marquee_btn')}</Link>
         </span>
       </div>

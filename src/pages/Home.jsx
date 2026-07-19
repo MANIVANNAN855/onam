@@ -53,6 +53,22 @@ const Home = () => {
               <h3>{t('feature_fun_title')}</h3>
               <p>{t('feature_fun_desc')}</p>
             </div>
+            <div className="feature">
+              <h3>{t('feature_boatrace_title')}</h3>
+              <p>{t('feature_boatrace_desc')}</p>
+            </div>
+            <div className="feature">
+              <h3>{t('feature_sadya_title')}</h3>
+              <p>{t('feature_sadya_desc')}</p>
+            </div>
+            <div className="feature">
+              <h3>{t('feature_pulikali_title')}</h3>
+              <p>{t('feature_pulikali_desc')}</p>
+            </div>
+            <div className="feature">
+              <h3>{t('feature_thiruvathira_title')}</h3>
+              <p>{t('feature_thiruvathira_desc')}</p>
+            </div>
           </div>
         </section>
       </div>

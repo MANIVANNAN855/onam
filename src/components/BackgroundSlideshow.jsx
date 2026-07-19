@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
 const slides = [
-  { img: '/aa.jpg', filter: 'none', position: 'center 10%' }, // Kathakali boat
-  { img: '/bb.jpg', filter: 'none', position: 'center center' }, // Boat race
-  { img: '/cc.avif', filter: 'none', position: 'center 25%' },   // Yellow beard
-  { img: '/dd.jpg', filter: 'none', position: 'center top' }, // Mahabali
-  { img: '/ee.png', filter: 'none', position: 'center 15%', mobilePosition: 'center center' },    // Pookolam women
-  { img: '/ff.jpg', filter: 'none', position: 'center center', mobilePosition: 'center center' } // New image
+  { img: '/slide_1.png', filter: 'none', position: 'center 10%' }, // Kathakali boat
+  { img: '/slide_2.png', filter: 'none', position: 'center center' }, // Boat race
+  { img: '/slide_3.png', filter: 'none', position: 'center 25%' },   // Theyyam
+  { img: '/slide_4.png', filter: 'none', position: 'center top' }, // Mahabali
+  { img: '/slide_5.png', filter: 'none', position: 'center 15%', mobilePosition: 'center center' },    // Pookolam women
+  { img: '/slide_6.png', filter: 'none', position: 'center center', mobilePosition: 'center center' } // Onasadya
 ];
 
 const BackgroundSlideshow = () => {

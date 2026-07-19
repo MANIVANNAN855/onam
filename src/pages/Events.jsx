@@ -15,7 +15,8 @@ const EVENTS_DATA = [
     date: 'Sept 5, 2026',
     descKey: 'feature_pookolam_desc',
     color: '#F59E0B',
-    image: '/pookolam.jpg'
+    image: '/pookolam.jpg',
+    bgPosition: 'center'
   },
   {
     id: 'Duo Dance',
@@ -23,7 +24,8 @@ const EVENTS_DATA = [
     date: 'Sept 6, 2026',
     descKey: 'feature_dance_desc',
     color: '#8B5CF6',
-    image: duoDanceImg
+    image: duoDanceImg,
+    bgPosition: 'top'
   },
   {
     id: 'Fashion Parade',
@@ -31,7 +33,8 @@ const EVENTS_DATA = [
     date: 'Sept 7, 2026',
     descKey: 'feature_fashion_desc',
     color: '#F43F5E',
-    image: fashionParadeImg
+    image: fashionParadeImg,
+    bgPosition: 'top'
   },
   {
     id: 'Tug Of War',
@@ -39,7 +42,8 @@ const EVENTS_DATA = [
     date: 'Sept 8, 2026',
     descKey: 'feature_tug_desc',
     color: '#EF4444',
-    image: '/tug_of_war_generated.png'
+    image: '/tug_of_war_generated.png',
+    bgPosition: 'center'
   }
 ];
 
