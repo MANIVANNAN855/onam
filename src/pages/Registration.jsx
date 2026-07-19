@@ -19,16 +19,15 @@ const EVENT_REQUIREMENTS = {
   'Tug Of War': 6
 };
 
-// Helper for auto-calculating year based on roll number
 const calculateYear = (rollNo, department) => {
-  if (['CT-UG', 'MSC', 'MBA', 'MCA'].includes(department)) return null;
+  if (['CT-UG', 'MBA', 'MCA'].includes(department)) return null;
   if (rollNo.length >= 2) {
     const prefix = rollNo.substring(0, 2);
     if (prefix === '26') return '1';
     if (prefix === '25') return '2';
     if (prefix === '24') return '3';
     if (prefix === '23') return '4';
-    if (prefix === '22') return '5';
+    if (prefix === '22' && department === 'MSC') return '5';
   }
   return null;
 };
@@ -214,7 +213,7 @@ const Registration = () => {
   }
 
   const renderYearOptions = (department, value, onChange, name) => {
-    const isManual = ['CT-UG', 'MSC', 'MBA', 'MCA'].includes(department);
+    const isManual = ['CT-UG', 'MBA', 'MCA'].includes(department);
     return (
       <select 
         id={name} 
