@@ -123,6 +123,11 @@ const Registration = () => {
       });
 
       if (!response.ok) {
+        if (response.status === 409) {
+          const errData = await response.json();
+          alert(errData.error || 'Already exsist so unable to register');
+          return;
+        }
         throw new Error('Failed to submit registration');
       }
 

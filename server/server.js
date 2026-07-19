@@ -47,6 +47,25 @@ app.post('/api/register', upload.single('audioFile'), async (req, res) => {
       return res.status(400).json({ error: 'Event and leader data are required' });
     }
 
+    // Check for duplicate roll numbers (leader or any team member)
+    const allRollNos = [leaderData.rollNo];
+    if (teamMembers && Array.isArray(teamMembers)) {
+      teamMembers.forEach(member => {
+        if (member.rollNo) allRollNos.push(member.rollNo);
+      });
+    }
+
+    const existingRegistration = await Registration.findOne({
+      $or: [
+        { 'leaderData.rollNo': { $in: allRollNos } },
+        { 'teamMembers.rollNo': { $in: allRollNos } }
+      ]
+    });
+
+    if (existingRegistration) {
+      return res.status(409).json({ error: 'Already exsist so unable to register' });
+    }
+
     const newRegistration = new Registration({
       event,
       leaderData,
