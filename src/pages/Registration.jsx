@@ -99,15 +99,21 @@ const Registration = () => {
   const handleLeaderChange = (e) => {
     const { name, value } = e.target;
     
+    // Automatically convert name and rollNo to uppercase
+    const finalValue = (name === 'name' || name === 'rollNo') ? value.toUpperCase() : value;
+    
     setLeaderData(prev => {
-      return { ...prev, [name]: value };
+      return { ...prev, [name]: finalValue };
     });
   };
 
   const handleMemberChange = (index, field, value) => {
+    // Automatically convert name and rollNo to uppercase
+    const finalValue = (field === 'name' || field === 'rollNo') ? value.toUpperCase() : value;
+
     setTeamMembers(prev => {
       const updated = [...prev];
-      updated[index][field] = value;
+      updated[index][field] = finalValue;
       
       // Auto-calculate year if rollNo or department changed
       if (field === 'rollNo' || field === 'department') {
