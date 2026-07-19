@@ -28,6 +28,7 @@ const calculateYear = (rollNo, department) => {
     if (prefix === '25') return '2';
     if (prefix === '24') return '3';
     if (prefix === '23') return '4';
+    if (prefix === '22') return '5';
   }
   return null;
 };
@@ -231,6 +232,7 @@ const Registration = () => {
         <option value="2">{t('year_2')}</option>
         <option value="3">{t('year_3')}</option>
         <option value="4">{t('year_4')}</option>
+        <option value="5">{t('year_5')}</option>
       </select>
     );
   };
