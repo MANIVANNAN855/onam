@@ -99,8 +99,13 @@ const Registration = () => {
   const handleLeaderChange = (e) => {
     const { name, value } = e.target;
     
-    // Automatically convert name and rollNo to uppercase
-    const finalValue = (name === 'name' || name === 'rollNo') ? value.toUpperCase() : value;
+    let finalValue = value;
+    if (name === 'rollNo') {
+      // Allow only alphanumeric characters
+      finalValue = value.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+    } else if (name === 'name') {
+      finalValue = value.toUpperCase();
+    }
     
     setLeaderData(prev => {
       return { ...prev, [name]: finalValue };
@@ -108,8 +113,13 @@ const Registration = () => {
   };
 
   const handleMemberChange = (index, field, value) => {
-    // Automatically convert name and rollNo to uppercase
-    const finalValue = (field === 'name' || field === 'rollNo') ? value.toUpperCase() : value;
+    let finalValue = value;
+    if (field === 'rollNo') {
+      // Allow only alphanumeric characters
+      finalValue = value.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+    } else if (field === 'name') {
+      finalValue = value.toUpperCase();
+    }
 
     setTeamMembers(prev => {
       const updated = [...prev];

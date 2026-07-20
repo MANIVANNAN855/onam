@@ -42,6 +42,19 @@ app.post('/api/register', upload.single('audioFile'), async (req, res) => {
       teamMembers = JSON.parse(teamMembers);
     }
 
+    // Clean roll numbers to allow only alphanumeric characters
+    if (leaderData && leaderData.rollNo) {
+      leaderData.rollNo = leaderData.rollNo.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+    }
+    if (teamMembers && Array.isArray(teamMembers)) {
+      teamMembers = teamMembers.map(member => {
+        if (member.rollNo) {
+          member.rollNo = member.rollNo.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+        }
+        return member;
+      });
+    }
+
     // Basic validation
     if (!event || !leaderData) {
       return res.status(400).json({ error: 'Event and leader data are required' });
