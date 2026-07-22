@@ -28,7 +28,7 @@ const BackgroundSlideshow = () => {
           style={{ 
             backgroundImage: `url(${slide.img})`,
             '--bg-pos-desktop': slide.position || 'center center',
-            '--bg-pos-mobile': 'center center',
+            '--bg-pos-mobile': slide.mobilePosition || 'center center',
             filter: slide.filter 
           }}
         />
